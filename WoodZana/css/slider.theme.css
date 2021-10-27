@@ -1,0 +1,78 @@
+.reviews__slider {
+    padding: 0 20px;
+    position: relative;
+}
+
+.reviews__slider .owl-stage-outer {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.reviews__slider .owl-stage-outer .owl-stage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.reviews__slider .owl-nav.disabled {
+    display: none;
+}
+
+.reviews__slider .owl-nav button {
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url(../images/next.png);
+    background-position: 50%;
+    background-size: 30px 50px;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.reviews__slider .owl-nav .owl-prev {
+    left: -5px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.reviews__slider .owl-nav .owl-next {
+    right: 3px;
+}
+
+.reviews__slider .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.reviews__slider .owl-dots .owl-dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    padding: 0;
+    -webkit-transition: background-color .3s, -webkit-box-shadow .3s;
+    transition: background-color .3s, -webkit-box-shadow .3s;
+    -o-transition: background-color .3s, box-shadow .3s;
+    transition: background-color .3s, box-shadow .3s;
+    transition: background-color .3s, box-shadow .3s, -webkit-box-shadow .3s;
+    will-change: background-color, box-shadow;
+}
+
+.reviews__slider .owl-dots .owl-dot.active {
+    background-color: #a0a0a0;
+    -webkit-box-shadow: 0 0 1px 1px #999, inset 0 0 1px 1px #fff;
+    box-shadow: 0 0 1px 1px #999, inset 0 0 1px 1px #fff
+}
+
+.reviews__slider .owl-dots .owl-dot:not(:last-child) {
+    margin-right: 10px;
+}

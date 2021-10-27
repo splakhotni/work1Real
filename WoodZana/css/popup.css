@@ -1,0 +1,161 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0;
+    background-color: hsla(0, 0%, 100%, .6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+    -webkit-transition: opacity .5s, visibility .5s;
+    -o-transition: opacity .5s, visibility .5s;
+    transition: opacity .5s, visibility .5s
+}
+ 
+.popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.active .popup__appear {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity:1;
+}
+
+.popup__close-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: block;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+    will-change: opacity;
+}
+
+.popup__close-btn:hover {
+    opacity: .8;
+}
+
+.popup__close-btn svg {
+    pointer-events: none;
+    fill: #333;
+}
+
+.popup__appear {
+    -webkit-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    transform: translateY(-300%);
+    opacity: 0;
+    -webkit-transition: opacity .3s, -webkit-transform .4s;
+    transition: opacity .3s, -webkit-transform .4s;
+    -o-transition: transform .4s, opacity .3s;
+    transition: transform .4s, opacity .3s;
+    transition: transform .4s, opacity .3s, -webkit-transform .4s;
+    will-change: transform, opacity
+}
+
+
+
+/********************************/
+
+
+
+.burger-active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 900;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    width: 150px;
+    height: 300px;
+    justify-content:flex-end;
+    padding-bottom: 20px;
+    opacity: 0;
+    background-color: hsla(0, 0, 0, .1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+    -webkit-transition: opacity .5s, visibility .5s;
+    -o-transition: opacity .5s, visibility .5s;
+    transition: opacity .5s, visibility .5s
+}
+.burger-active.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.burger-active.active .popup__appear {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity:1;
+}
+.burger-active .feedback__block{
+    
+    width: 360px;
+    height: 395px;
+    background-color: #ffffff;
+    opacity: 1;
+    margin: 110px 0px;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+.measurement__blocks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    border: 3px solid #000000;
+    background-color: #fff;
+}
+
+@media (max-width: 467px){
+    .measurement__blocks{
+        width: 365px;
+        height: 450px;
+    }  
+}
+@media (max-width: 367px){
+    .measurement__blocks{
+        width: 285px;
+        height: 400px; 
+        z-index: 10;
+    }
+}
